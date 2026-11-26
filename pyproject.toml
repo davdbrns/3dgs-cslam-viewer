@@ -1,0 +1,19 @@
+[project]
+name = "cslam-viewer"
+version = "0.1.0"
+description = "Viser viewer for multi-agent 3DGS C-SLAM maps"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "numpy>=1.26",
+    # Pinned: the drop zone relies on viser's internal RunJavascriptMessage.
+    "viser==1.1.1",
+]
+
+[project.scripts]
+cslam-viewer = "cslam_viewer.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
